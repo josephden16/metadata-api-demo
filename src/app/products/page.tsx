@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import Link from "next/link";
 
 async function fetchProducts() {
@@ -6,15 +5,6 @@ async function fetchProducts() {
   const data = await res.json();
   return data;
 }
-
-export const metadata: Metadata = {
-  title: "Online Store | Products",
-  description: "Check out our products",
-  openGraph: {
-    title: "Online Store | Products",
-    description: "Check out our products",
-  },
-};
 
 export default async function Page() {
   const products = await fetchProducts();
