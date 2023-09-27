@@ -35,8 +35,12 @@ export default async function Page() {
                 className="w-full h-40 object-cover mb-2 rounded-lg"
               />
             </Link>
-            <h3 className="text-xl font-semibold">{product.title}</h3>
-            <p className="text-gray-500">{product.description}</p>
+            <h3 className="text-xl text-gray-800 font-semibold mb-2">
+              {product.title}
+            </h3>
+            <p className="text-gray-500 line-clamp-6 text-sm">
+              {product.description}
+            </p>
           </div>
         ))}
       </div>
