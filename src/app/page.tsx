@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
-      {/* Navigation Links */}
       <nav className="mb-6 space-x-5">
         <Link className="text-white text-lg underline" href="/">
           Home

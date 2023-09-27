@@ -7,7 +7,7 @@ async function fetchProducts() {
   return data;
 }
 
-export const metadta: Metadata = {
+export const metadata: Metadata = {
   title: "Online Store | Products",
   description: "Check out our products",
   openGraph: {
