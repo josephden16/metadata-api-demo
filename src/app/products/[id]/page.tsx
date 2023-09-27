@@ -1,7 +1,30 @@
+import { Metadata } from "next";
+
 async function getProduct(id: string) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
   const data = await res.json();
   return data;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const product = await getProduct(params.id);
+  return {
+    title: product.title,
+    description: product.description,
+    openGraph: {
+      title: product.title,
+      description: product.description,
+      images: [
+        {
+          url: product.image,
+        },
+      ],
+    },
+  };
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
